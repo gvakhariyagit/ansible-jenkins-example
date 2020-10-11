@@ -1,0 +1,6 @@
+- hosts: spring-boot-app-server
+  become: yes
+  roles:
+   - roles/deploy_app_role
+     
+  

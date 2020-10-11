@@ -1,0 +1,7 @@
+---
+   - name: Make LoadBalancer configuration
+     copy: 
+       src: /home/gvakhariya/ansible/spring_boot_mysql_nginx_ansible_project/roles/nginx-config-role/files/loadbalancer.conf
+       dest: /etc/nginx/conf.d
+   
+       

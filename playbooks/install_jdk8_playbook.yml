@@ -1,0 +1,5 @@
+- hosts: spring-boot-app-server 
+  become: yes
+  roles:
+   - roles/install_jdk8_role
+

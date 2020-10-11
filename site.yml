@@ -1,0 +1,6 @@
+- import_playbook: playbooks/mysql_playbook.yml
+- import_playbook: playbooks/nginx_playbook.yml
+- import_playbook: playbooks/configure_nginx_playbook.yml  
+- import_playbook: playbooks/install_jdk8_playbook.yml
+- import_playbook: playbooks/deploy_app_playbook.yml  
+

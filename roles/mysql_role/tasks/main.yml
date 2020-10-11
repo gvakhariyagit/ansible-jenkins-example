@@ -1,0 +1,26 @@
+- name: Install MySQL packages
+  apt: 
+   name: "{{ item }}"
+   state: present
+   update_cache: yes
+  with_items:    
+   - mysql-client
+   - mysql-common
+   - mysql-server
+   - python3-pymysql  
+   - libmariadb-java
+
+- name: Start MySQL service
+  service: 
+    name: mysql 
+    state: started
+    enabled: true 
+
+- name: Create a new database with name 'notes_app'
+  mysql_db:
+    login_unix_socket: /var/run/mysqld/mysqld.sock      
+    name: notes_app
+    state: present    
+
+
+
